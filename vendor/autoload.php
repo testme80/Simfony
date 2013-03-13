@@ -2,21 +2,34 @@
 
 // Autoload.php
 
-// Load all Framework required files
+/**
+ * Load all required framework files
+ */
+
+include 'framework/Main/config.php';
 
 foreach (glob("framework/*/*.php") as $filename)
 {
-    include($filename);
+   
+    if (strpos($filename, BANNED_PHPFILES) || $filename == 'framework/Main/config.php' || $filename == 'none') {
+        
+    } else {
+        include($filename);
+    }
+    
+    
 }
 
-// Create a new app!
+/**
+ * Create an new app!
+ */
 
 use Framework\App\Application;
 
-if (Application::isPageSet()) {
-    Application::loadPage($_GET['page']);
-} else {
-    Application::loadPage(null);
-}
+$application = new Application();
 
-// End of autoload.php
+if (Application::isPageSet()) {
+    $application->loadPage($_GET['page']);
+} else {
+    $application->loadPage(null);
+}

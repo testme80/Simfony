@@ -1,2 +1,4 @@
-[08/Feb/2013:21:41:29] (index) This Is A Error!
-[08/Feb/2013:21:41:30] (index) This Is A Error!
+[12/Mar/2013:20:48:32] (Event-Watcher) IP ::1 has loaded an page without the dfd extension
+[12/Mar/2013:20:50:53] (Event-Watcher) IP ::1 has loaded an page without the dfd extension
+[12/Mar/2013:20:55:05] (EventManager\Create-Error) File ./vendor/Builders/notFound.php can not been included, does the file exists?
+[12/Mar/2013:20:55:10] (EventManager\Create-Error) File ./vendor/Builders/notFound.php can not been included, does the file exists?
